@@ -1,0 +1,66 @@
+/* src/components/MovieList.css */
+.movie-list {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.movie-list h2 {
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+.movie-list h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+    justify-items: center;
+}
+
+/* На планшетах */
+@media (max-width: 1024px) {
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+    }
+}
+
+/* На мобильных устройствах */
+@media (max-width: 768px) {
+    .movie-list h2 {
+        font-size: 1.8rem;
+    }
+
+    .movies-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .movies-grid {
+        max-width: 100%;
+    }
+}

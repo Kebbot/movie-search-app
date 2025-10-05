@@ -1,0 +1,16 @@
+/* src/debug.css - временный файл для отладки */
+body {
+    background-color: red !important;
+    /* Проверьте, станет ли фон красным */
+}
+
+.app {
+    border: 5px solid yellow !important;
+    /* Увидите ли вы желтую рамку? */
+}
+
+.main-content {
+    border: 5px solid green !important;
+    /* Увидите ли вы зеленую рамку? */
+    background-color: blue !important;
+}
